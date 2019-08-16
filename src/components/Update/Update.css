@@ -1,0 +1,32 @@
+.player-cards{
+    background: #AAA9AF;
+    width: 17vw;
+    height: 50vh;
+    border: solid 3px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+.edit {
+    background: #AAA9AF;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+}
+.delete {
+    background: #AAA9AF;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    float: right; 
+}
+img {
+    height: 40vh;
+    width: 17vw;
+}
+.edit:hover {
+    cursor: pointer;
+}
+.delete:hover {
+    cursor: pointer;
+}
