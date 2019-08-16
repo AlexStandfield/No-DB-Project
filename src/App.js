@@ -115,6 +115,7 @@ class App extends Component {
         <Footer/>
         <Footer/>
         <Footer/>
+        <Footer/>
         </div>
 
       </div>

@@ -10,7 +10,8 @@ export default class Update extends Component {
             edit: false,
             editName: '',
             editPosition: '',
-            editRating: ''
+            editRating: '',
+            editImg: ''
         }
     }
     toggle = () => {
@@ -34,12 +35,18 @@ export default class Update extends Component {
             editRating: val
         })
     }
+    inputImg = (val) => {
+        this.setState({
+            editImg: val
+        })
+    }
 
     updatePlayers = (id) => {
         const updatedPlayers = {
             name: this.state.editName,
             position: this.state.editPosition,
-            rating: this.state.editRating
+            rating: this.state.editRating,
+            img: this.state.editImg
         }
         console.log(updatedPlayers)
         axios.put(`/api/players/${id}`, updatedPlayers)
@@ -67,20 +74,32 @@ export default class Update extends Component {
                 {!this.state.edit
                 ?
                 (<div className="player-cards">
+
                     <img src={this.props.players.img} alt="Player Picture"/>
+
                     <h3 className="player-name">Name: {this.props.players.name}</h3>
+
                     <h3 className="player-position">Position: {this.props.players.position}</h3>
+
                     <h3 className="player-rating">Rating: {this.props.players.rating}</h3>
+
                     <button className="edit" onClick={this.toggle}>Edit</button>
+
                     <button className="delete" onClick={() => this.deletePlayer(this.props.players.id)}>Delete</button>
                 </div> )
                 :
                 (<div className="player-cards">
-                    <img></img>
-                    <input placeholder="Edit Name" onChange={(e) => this.inputName(e.target.value)} value={this.state.editName}/>
-                    <input placeholder="Edit Position" onChange={(e) => this.inputPosition(e.target.value)} value={this.state.editPosition}/>
+                    
+                    <input placeholder="Image URL Here" onChange={(e) => this.inputImg(e.target.value)}value={this.state.editImg}/>
+
+                    <input placeholder="Edit Name" onChange={(e) => this.inputName(e.target.value)}value={this.state.editName}/>
+
+                    <input placeholder="Edit Position" onChange={(e) => this.inputPosition(e.target.value)}value={this.state.editPosition}/>
+
                     <input placeholder="Edit Rating" onChange={(e) => this.inputRating(e.target.value)}value={this.state.editRating}/>
+
                     <button className="edit" onClick={() => this.updatePlayers(this.props.players.id)}>Done</button>
+
                     <button className="delete" onClick={() => this.deletePlayer(this.props.players.id)}>Delete</button>
                 </div> )
             }
