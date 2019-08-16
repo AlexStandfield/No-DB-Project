@@ -9,16 +9,16 @@
 }
 .edit {
     background: #AAA9AF;
-    border: none;
     color: blue;
     text-decoration: underline;
+    border: none;
 }
 .delete {
     background: #AAA9AF;
-    border: none;
     color: blue;
     text-decoration: underline;
-    float: right; 
+    float: right;
+    border: none;
 }
 img {
     height: 40vh;

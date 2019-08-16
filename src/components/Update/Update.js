@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+
 import './Update.css'
 
 export default class Update extends Component {
@@ -14,6 +15,7 @@ export default class Update extends Component {
             editImg: ''
         }
     }
+
     toggle = () => {
         this.setState({
             edit: !this.state.edit
@@ -66,7 +68,6 @@ export default class Update extends Component {
         })
     }
     
-
     render(){
         console.log(this.state)
         return(
@@ -103,7 +104,6 @@ export default class Update extends Component {
                     <button className="delete" onClick={() => this.deletePlayer(this.props.players.id)}>Delete</button>
                 </div> )
             }
-
             </div>
         )
     }

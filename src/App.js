@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 
+
 import Header from './components/Header/Header'
 import Update from './components/Update/Update'
 import Footer from './components/Footer/Footer'
 
 import 'reset-css'
 import './App.css'
-
 
 class App extends Component {
   constructor(){
@@ -34,7 +34,6 @@ class App extends Component {
 
   addPlayers = (event) => {
     event.preventDefault()
-
     const {name, position, rating, img} = this.state
     const body = {
       name,
@@ -78,7 +77,6 @@ class App extends Component {
       players: data
   })
   }
- 
 
   render(){
     const mappedPlayers = this.state.players.map((players, i) => {
@@ -107,17 +105,16 @@ class App extends Component {
           <button className="button" onClick={this.clearInput}>Clear</button>
         </div>
         <div className="card-container">
-        {mappedPlayers}
+          {mappedPlayers}
         </div>
         <div className="footer-container">
-        <Footer/>
-        <Footer/>
-        <Footer/>
-        <Footer/>
-        <Footer/>
-        <Footer/>
+          <Footer/>
+          <Footer/>
+          <Footer/>
+          <Footer/>
+          <Footer/>
+          <Footer/>
         </div>
-
       </div>
     )
   }

@@ -4,15 +4,14 @@
     width: 100vw;
     background: #FFFFFF;
     font-family: 'Lato', sans-serif;
-
 }
 .input-field{
     height: 15vh;
     width: 80vw;
+    background: gray;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: gray;
     position: relative;
     left: 10vw;
     margin-bottom: 5vh;
@@ -31,13 +30,13 @@
     height: 20px;
 }
 .input-field > button{
+    height: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    background: #0767BF;
-    border: none;
-    color: white;
-    height: 25px;
     border-radius: 10px;
+    background: #0767BF;
+    color: white;
+    border: none;
 }
 .card-container{
     width: 100%;
