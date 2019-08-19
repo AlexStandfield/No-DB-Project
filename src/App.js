@@ -92,13 +92,13 @@ class App extends Component {
           <input placeholder="Name here" type="text" value={this.state.name} onChange={(event) => this.setState({name: event.target.value})}/>
           
           <label>Position</label>
-          <input placeholder="Position Here" type="text" value={this.state.position} onChange={(event) => this.setState({position: event.target.value})}/>
+          <input placeholder="Position here" type="text" value={this.state.position} onChange={(event) => this.setState({position: event.target.value})}/>
 
           <label>Rating</label>
-          <input placeholder="Rating Here" type="text" value={this.state.rating} onChange={(event) => this.setState({rating: event.target.value})}/>
+          <input placeholder="Rating here" type="text" value={this.state.rating} onChange={(event) => this.setState({rating: event.target.value})}/>
 
           <label>Image</label>
-          <input placeholder="Image URL Here" type="text" value={this.state.img} onChange={(event) => this.setState({img: event.target.value})}/>
+          <input placeholder="Image URL here" type="text" value={this.state.img} onChange={(event) => this.setState({img: event.target.value})}/>
 
           <button className="button" onClick={this.addPlayers}>Submit</button>
 
